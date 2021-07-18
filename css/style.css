@@ -1,0 +1,245 @@
+/* 
+==========================
+Variables, Global Styles
+===========================
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@341;494&family=Grand+Hotel&display=swap');
+/* font-family: 'Catamaran', sans-serif;
+font-family: 'Grand Hotel', cursive; */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --clr-primary : #698f3f;
+    --clr-white : #ffffff;
+    --clr-grey : #e5e5e5;
+    --clr-black : #3a3e3b;
+    --clr-yellow : #fca311;
+    --main-transition : all 0.3s linear; 
+    --spacing : 0.5rem;
+}
+body{
+    background: var(--clr-white);
+    line-height: 1.5;
+    color: var(--clr-black);
+    font-family: 'Catamaran', sans-serif;
+}
+h1{
+    font-size: 3.2rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 2rem;
+}
+p{
+    font-size: 1rem;
+}
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.btn{
+    display: inline-block;
+    color: var(--clr-black);
+    background: var(--clr-primary);
+    outline: 0.2rem solid var(--clr-primary);
+    outline-offset: 4px;
+    font-weight: bold;
+    transition: var(--main-transition);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: white;
+    opacity: 0.8;
+}
+
+/* 
+=============
+Header
+=============
+*/
+
+.header{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url("../images/main-bcg.jpeg") center/cover no-repeat fixed;
+    position: relative;
+}
+
+.banner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: var(--spacing);
+    text-align: center;
+}
+
+.sub-title{
+    color: var(--clr-primary);
+    font-family: 'Grand Hotel', cursive;
+}
+
+.title{
+    text-transform: uppercase;
+    color: var(--clr-white);
+    letter-spacing: var(--spacing);
+    margin-top: 2rem;
+}
+
+.banner-btn{
+    padding: 1.1rem 1.5rem;
+    margin-top: 2rem;
+}
+
+
+/* 
+======================
+Content Divider
+======================
+*/
+
+.content-divider{
+    height: 0.5rem;
+    background : linear-gradient(to left, var(--clr-primary), var(--clr-yellow), var(--clr-primary));    
+}
+
+/* 
+=================
+Skills
+=================
+*/
+
+.skill-icon{
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    transition: var(--main-transition);
+}
+.skill{
+    background: var(--clr-grey);
+    padding : 2.5rem 0;
+    text-align: center;
+    transition: var(--main-transition);
+}
+.skill-title{
+    font-size: 0.9rem;
+    letter-spacing: var(--spacing);
+    text-transform: uppercase;
+    color: var(--clr-primary);
+    margin-bottom: 1.5rem;
+    transition: var(--main-transition);
+}
+.skill-text{
+    color: var(--clr-black);
+    max-width: 13rem;
+    margin: 0 auto;
+    font-family: 'Catamaran', sans-serif;
+    line-height: 1.5;
+    opacity: 0.9;
+    transition: var(--main-transition);
+}
+.skill:hover{
+    background: var(--clr-primary);
+}
+.skill:hover .skill-icon{
+    transform: translateY(-5px);
+}
+.skill:hover .skill-title{
+    color: var(--clr-white);
+}
+.skill:hover .skill-text{
+    color: rgb(46, 43, 43);
+    opacity: 1;
+}
+
+@media screen and (min-width : 576px){
+    .skill{
+        float:left;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width : 1200px){
+    .skill{
+        width: 25%;
+    }
+}
+
+.clearfix::after, .clearfix::before{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+/* 
+===============
+About
+===============
+*/
+
+.about-container{
+    width: 80vw;
+    margin: 0 auto;
+    padding: 6rem 0;
+    max-width: 1170px;
+}
+
+.about-img-container{
+    background : var(--clr-primary);
+    border: 8px solid var(--clr-primary);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.about-img{
+    transition: var(--main-transition);
+}
+
+.about-img-container:hover .about-img{
+    transform: scale(1.2);
+    opacity: 0.5;
+}
+
+.about-text-container{
+    margin-top: 4rem;
+}
+
+.about-subtitle{
+    color: var(--clr-primary);
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    font-family: 'Grand Hotel', cursive; 
+}
+
+.about-title{
+    text-transform: uppercase;
+}
+
+.about-para{
+    padding: 1rem 0;
+    max-width: 27rem;
+}
+
+.about-btn{
+    padding: 0.8rem 1.5rem;
+    margin-top: 2rem;
+}
+
+@media screen and (min-width : 992px){
+    .about-img-container, .about-text-container{
+        float: left;
+        width: 50%;
+    }
+}
