@@ -193,16 +193,21 @@ About
 .about-container{
     width: 80vw;
     margin: 0 auto;
-    padding: 6rem 0;
+    padding: 4rem 0;
     max-width: 1170px;
 }
 
 .about-img-container{
-    background : var(--clr-primary);
-    border: 8px solid var(--clr-primary);
+    overflow: hidden;
+}
+
+.about-border-bg {
+    background: var(--clr-primary);
+    border: 0.5rem solid var(--clr-primary);
     border-radius: 1rem;
     overflow: hidden;
 }
+
 .about-img{
     transition: var(--main-transition);
 }
@@ -228,12 +233,14 @@ About
 }
 
 .about-para{
-    padding: 1rem 0;
-    max-width: 27rem;
+    padding: 0.8rem 0;
+    max-width: 26rem;
+    font-family: 'Catamaran', sans-serif;
+    font-weight : 350;
 }
 
 .about-btn{
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 1.4rem;
     margin-top: 2rem;
 }
 
@@ -241,5 +248,125 @@ About
     .about-img-container, .about-text-container{
         float: left;
         width: 50%;
+        padding: 2rem;
+    }
+
+    .about-container{
+        display: flow-root;
+        width: 92vw;
+    }
+
+    .about-text-container{
+        margin: -0.1rem;
+    }
+}
+
+
+
+/* 
+===================
+Products
+===================
+*/
+
+.product{
+    background: var(--clr-black);
+}
+
+.product-subtitle{
+    color : var(--clr-primary);
+    font-family: 'Grand Hotel', cursive;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+
+}
+
+.product-title{
+    color: var(--clr-white);
+    text-transform: uppercase;
+}
+
+.product-text{
+    color: var(--clr-white);
+    padding: 2rem 0;
+    max-width: 26rem;
+}
+
+.parent-product{
+    padding: 6rem 0;
+}
+
+.product-btn{
+    margin: 1rem 0 3rem 0;
+    padding: 0.8rem 1.4rem;
+}
+
+.prod-title{
+    font-family: 'Catamaran', sans-serif;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: var(--spacing);
+}
+
+.product-price{
+    font-family: 'Grand Hotel', cursive;
+    color: var(--clr-primary);
+    letter-spacing: var(--spacing);
+    font-size: 1.2rem;
+}
+
+.product-img{
+    border-radius: 0.5rem;
+}
+
+.prod-title, .product-price{
+    padding: 0.5rem 0;
+}
+
+.prod-title{
+    margin-top: 1rem;
+    max-width: 2rem;
+}
+
+.prod{
+    padding: 3.5rem 0 0.8rem 0;
+}
+
+.product-main-container{
+    display: flow-root;
+}
+
+@media screen and (min-width : 768px){
+    .prod{
+        float: left;
+        width: 50%;
+        padding : 1rem 1.6rem 0 0 ;
+    }
+}
+
+@media screen and (min-width : 993px){
+    .prod{
+        width: 33.33%;
+    }
+}
+
+@media screen and (min-width : 1200px){
+    .product-info, .product-main-container{
+        float: left;
+        padding-right: 1.5rem;
+    }
+
+    .product-info{
+        width: 25%;
+    }
+
+    .product-main-container{
+        width: 75%;
+        margin-top: 1rem;
+    }
+
+    .parent-product{
+        display: flow-root;
     }
 }
