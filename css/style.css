@@ -90,6 +90,7 @@ Header
 .sub-title{
     color: var(--clr-primary);
     font-family: 'Grand Hotel', cursive;
+    animation: slide-left 5s ease-in-out 1;
 }
 
 .title{
@@ -97,11 +98,65 @@ Header
     color: var(--clr-white);
     letter-spacing: var(--spacing);
     margin-top: 2rem;
+    animation: slide-right 5s ease-in-out 1;
 }
 
 .banner-btn{
     padding: 1.1rem 1.5rem;
     margin-top: 2rem;
+    animation : button-big 5s ease-in-out 1;
+}
+
+
+@keyframes slide-left {
+    0%{
+        transform: translateX(100%);
+    }
+    
+    50%{
+        transform: translateX(-30%);
+    }
+
+    85%{
+        transform: translateX(20%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes slide-right {
+    0%{
+        transform: translateX(-100%);
+    }
+    
+    50%{
+        transform: translateX(30%);
+    }
+
+    85%{
+        transform: translateX(-20%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes button-big {
+    0%{
+        transform: scale(2);
+        opacity: 0;
+        
+    }
+    
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 
@@ -242,6 +297,7 @@ About
 .about-btn{
     padding: 0.8rem 1.4rem;
     margin-top: 2rem;
+    display: inline-block;
 }
 
 @media screen and (min-width : 992px){
@@ -369,4 +425,238 @@ Products
     .parent-product{
         display: flow-root;
     }
+}
+
+
+
+/* 
+===================
+Services
+===================
+*/
+
+.services{
+    background: var(--clr-grey);
+}
+
+.service-text-container{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.service-subtitle{
+    font-family: 'Grand Hotel', cursive;
+    color: var(--clr-primary);
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+}
+
+.service-title{
+    text-transform: uppercase;
+}
+
+.recipe-text-container{
+    background: var(--clr-primary);
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.recipe{
+    border : 5px solid var(--clr-primary);
+    border-radius: 1rem;
+    margin-top: 1.8rem;
+    text-transform: capitalize;
+    padding: 0.18rem;
+    box-shadow: 6px 6px 4px var(--clr-black);
+    transition: var(--main-transition);
+}
+
+.recipe h4{
+    color: var(--clr-white);
+    max-width: 16rem;
+    margin: 0 auto;
+    letter-spacing: var(--spacing);
+    font-size: 1.3rem;
+    font-family: 'Catamaran', sans-serif;
+    padding-top: 3rem;
+}
+
+.service-btn{
+    text-transform: capitalize;
+    color : var(--clr-primary);
+    background: var(--clr-white);
+    border-radius: 0.5rem;
+    padding: 0.6rem 2.1rem;
+    border: 3.5px solid var(--clr-white);
+    transition: var(--main-transition);
+    font-family: 'Catamaran', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin: 1.2rem 0;
+}
+
+.service-btn:hover{
+    color: var(--clr-white);
+    background: var(--clr-primary);
+}
+
+.service-icon-container{
+    position: relative;
+    display: block;
+}
+
+.service-icon{
+    position: absolute;
+    background: var(--clr-yellow);
+    font-size: 2.5rem;
+    border-radius: 50%;
+    padding: 0.55rem;
+    border : 3.5px solid var(--clr-primary);
+    left : 50%;
+    top : 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 10px 10px 5px var(--clr-black);
+}
+
+.recipe:hover{
+    box-shadow: 9px 9px 4px var(--clr-black);    
+}
+
+.service-details{
+    display: flow-root;
+}
+
+.recipe-img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+@media screen and (min-width : 768px){
+    .recipe{
+        float: left;
+        width: 45%;
+        margin-right: 5%;
+    }
+}
+
+@media screen and (min-width : 992px){
+    .recipe{
+        width: 30%;
+        margin-right: 3%;
+    }
+}
+
+
+/* 
+===================
+Contact
+===================
+*/
+/* font-family: 'Catamaran', sans-serif;
+font-family: 'Grand Hotel', cursive; */
+
+.add-icon{
+    color: var(--clr-primary);
+    font-size: 1.7rem;
+}
+
+.contact-subtitle{
+    display: inline-block;
+    color: var(--clr-primary);
+    letter-spacing: var(--spacing);
+    font-family: 'Grand Hotel', cursive;
+    text-transform: uppercase;
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
+}
+.contact-title{
+    font-size: 1.2rem;
+    font-family: 'Catamaran', sans-serif;
+    margin: 0.5rem 0 2.5rem 0;
+}
+
+input, textarea{
+    display: block;
+    margin: 4rem 0;
+}
+.form-btn{
+    display: inline-block;
+    padding: 0.9rem 1.3rem;
+    margin-top: 0.7rem;
+    text-transform: uppercase;
+}
+
+::placeholder{
+    color: var(--clr-primary);
+    font-family: 'Catamaran', sans-serif;
+    letter-spacing: var(--spacing);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+input,textarea{
+    /* font-family: 'Catamaran', sans-serif; */
+    font-weight: bold;
+    width: 100%;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    border-bottom : 2px solid var(--clr-primary);
+    outline: none;
+    padding: 1rem 0;
+}
+
+.form-address-container{
+    display: flow-root;
+}
+
+@media screen and (min-width : 992px){
+    .address-info, .form-info{
+        float: left;
+        width: 50%;
+    }
+
+    .address-info{
+        margin-top: 5rem;
+    }
+}
+
+/* 
+============
+footer
+============
+*/
+
+.footer{
+    background: var(--clr-black);
+    
+}
+.enquiry-icon{
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 1rem;
+    transition: var(--main-transition);
+}
+
+.footer-container{
+    text-align: center;
+}
+
+.end{
+    font-family: 'Catamaran', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.footer-text{
+    color: var(--clr-primary);
+}
+
+.enquiry-icon:hover{
+    color: var(--clr-primary);
 }
